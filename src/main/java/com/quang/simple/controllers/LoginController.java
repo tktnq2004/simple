@@ -40,6 +40,7 @@ public class LoginController {
             HttpServletResponse response,
             Model model,
             @Value("${MaxAge}") int MaxAge
+
     ) throws Exception {
         if (Utils.isUserLoggedIn(usernameCookie)) {
             return "redirect:/";

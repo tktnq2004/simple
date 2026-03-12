@@ -1,16 +1,15 @@
 package com.quang.simple.repository;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 
 @Repository
 public class LoginRepository {
-
-    private String url = "mysql://root:hfjFhhABiOBIRgLTGKZbLlegJnXMvaEu@gondola.proxy.rlwy.net:53447/railway";
-    private String username = "root";
-    private String password = "hfjFhhABiOBIRgLTGKZbLlegJnXMvaEu";
-
+    @Value("${MYSQL_URL}") private String url;
+    @Value("${MYSQL_USERNAME}") private String username;
+    @Value("${MYSQL_PASSWORD}") private String password;
     public boolean checkUser(String username, String password){
 
         try(
