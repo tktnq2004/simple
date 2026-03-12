@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Home</h1>
+<div th:unless="${userLoggedIn}">
+    <a th:href="@{/login}">Login</a>
+</div>
+
+<div th:if="${userLoggedIn}">
+    <a th:href="@{/math}">Math</a>
+    <a th:href="@{/logout}">Logout</a>
+</div>
+<div th:replace="~{footer :: copy}"></div>
+</body>
+</html>
