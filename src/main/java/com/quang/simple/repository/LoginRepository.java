@@ -7,9 +7,9 @@ import java.sql.*;
 @Repository
 public class LoginRepository {
 
-    private String url = "jdbc:mysql://localhost:3306/simple";
+    private String url = "mysql://root:hfjFhhABiOBIRgLTGKZbLlegJnXMvaEu@gondola.proxy.rlwy.net:53447/railway";
     private String username = "root";
-    private String password = "root";
+    private String password = "hfjFhhABiOBIRgLTGKZbLlegJnXMvaEu";
 
     public boolean checkUser(String username, String password){
 
