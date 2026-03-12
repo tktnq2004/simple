@@ -15,7 +15,6 @@ public class LoginService {
         if(loginRepository.checkUser(username,password)){
             return true;
         }
-
-        return loginRepository.createUser(username,password);
+        return false;
     }
 }

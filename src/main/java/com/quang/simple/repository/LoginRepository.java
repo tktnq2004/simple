@@ -32,25 +32,5 @@ public class LoginRepository {
 
         return false;
     }
-    public boolean createUser(String username,String password){
-        try(
-                Connection conn = DriverManager.getConnection(url, this.username, this.password);
-                PreparedStatement ps = conn.prepareStatement(
-                        "INSERT INTO users(username,password) VALUES (?, ?)"
-                );
-        ){
 
-            ps.setString(1, username);
-            ps.setString(2, password);
-
-            int rows = ps.executeUpdate();
-
-            return rows > 0;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return false;
-    }
 }
